@@ -505,7 +505,7 @@
         const src = ctx.createBufferSource();
         src.buffer = buf;
         src.connect(ctx.destination);
-        src.start(Math.max(ctx.currentTime, dabEndsAt));
+        src.start(Math.max(ctx.currentTime, dabEndsAt - 0.24));  // starts 100ms after slap begins);
       }
     }
 
